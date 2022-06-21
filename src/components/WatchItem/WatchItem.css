@@ -1,0 +1,48 @@
+.watch-item{
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: darkgoldenrod;
+	border: 1px solid white;
+	margin: 10px;
+	align-items: center;
+	border-radius: 5px;
+	justify-content: space-between;
+}
+.watch-item.done{
+	background-color: cadetblue;
+}
+.delete-btn{
+	border: 1px solid white;
+	min-height: 40px;
+	min-width: 40px;
+	text-align: center;
+	margin: 10px;
+	display: inline-block;
+	padding-top: 10px;
+	border-radius: 5px;
+	background-color: red;
+}
+.content{
+	margin: 10px;
+	font-size: 20px;
+}
+
+
+@media (max-width: 1370.98px){
+	.watch-item{
+		margin: 5px;
+	}
+	.content {
+		margin: 5px;
+		font-size: 1em;
+	}
+	.delete-btn{
+		min-height: 2em;
+		min-width: 2em;
+		font-size:  0.8em;
+		padding-top: 0.5em;
+		margin: 5px;
+	}
+
+}
+

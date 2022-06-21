@@ -1,0 +1,30 @@
+.container-watch{
+	max-width: 1600px;
+	margin: auto;
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+
+.watch-container-main{
+	display: flex;
+	flex-flow: row nowrap;
+	margin: 5px;
+	overflow: hidden;
+}
+
+.watch-container-main-form {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 67%;
+	margin: 5px;
+	border-radius: 5px;
+	background-color: rgba(128, 82, 140, 0.165);
+}
+
+
+@media (max-width: 990.98px){
+	.watch-container-main{
+		flex-direction: column-reverse;
+	}
+}
