@@ -1,22 +1,23 @@
 import React, { useContext } from 'react';
-import { WatchContext } from '../../context';
 import './WatchSideBar.css';
+import { WatchContext } from '../../context';
+
 
 
 function WatchSideBar() {
 
-	const {nameClasses, logoPath, applicationTitle} = useContext(WatchContext);
+	const {applicationTitle, logoPath} = useContext(WatchContext);
 
 	return (
-		<div className={nameClasses.WatchSideBar.classNameContainer}>
+		<div className="watch-sidebar-container">
 			<span
-				className={nameClasses.WatchSideBar.classNameTitle}
+				className="watch-sidebar-title"
 			>
 				{applicationTitle}
 			</span>
-			<div className={nameClasses.WatchSideBar.classNameContainerImg}>
+			<div className="watch-sidebar-img-container">
 				<img
-					className={nameClasses.WatchSideBar.classNameImg}
+					className="watch-sidebar-img"
 					src={logoPath}
 					alt='LOGO'>
 				</img>

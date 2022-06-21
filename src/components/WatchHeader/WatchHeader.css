@@ -2,7 +2,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-end;
-	max-height: 60px;
+	max-height: 70px;
 	margin: 5px;
 	overflow: hidden;
 	border-radius: 5px;
@@ -16,10 +16,9 @@
 
 .wathc-header-img-container{
 	position:relative;
-	margin-right: 5px;
 	width: 60px;
 	overflow: hidden;
-	padding-bottom: 100%;
+	margin: 3px;
 }
 
 .wathc-header-img{

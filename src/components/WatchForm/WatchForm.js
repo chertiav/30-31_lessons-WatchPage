@@ -1,19 +1,15 @@
-import React, { useContext, useState } from 'react';
-import { WatchContext } from '../../context';
+import React, { useState } from 'react';
 import './WatchForm.css';
 
 function WatchForm({onSubmit}) {
-
-	const {nameClasses} = useContext(WatchContext);
-
 
 	const [title, setTitle] = useState('');
 	const [director, setDirector] = useState('');
 
 	function onInputChange(e){
-		if (e.target.name === `${nameClasses.WatchForm.inputNameFirst}`){
+		if (e.target.name === "title"){
 			setTitle(e.target.value);
-		} if (e.target.name === `${nameClasses.WatchForm.inputNameSecond}`) {
+		} if (e.target.name === "director") {
 			setDirector(e.target.value);
 		}
 	}
@@ -26,22 +22,22 @@ function WatchForm({onSubmit}) {
 	}
 
 	return (
-		<form	className={nameClasses.WatchForm.classNameContainer}
+		<form	className="watch-form"
 					onSubmit = {onFormSubmit}
 					>
-			<input	name={nameClasses.WatchForm.inputNameFirst}
-							type={nameClasses.WatchForm.inputTypeFirst}
+			<input	name="title"
+							type="text"
 							value = {title}
 							onChange = {onInputChange}
-							placeholder = {nameClasses.WatchForm.inputPlaceholderFirst}
+							placeholder = "Film title"
 							/>
-			<input	name={nameClasses.WatchForm.inputNameSecond}
-							type={nameClasses.WatchForm.inputTypeSecond}
+			<input	name="director"
+							type="text"
 							value = {director}
 							onChange = {onInputChange}
-							placeholder = {nameClasses.WatchForm.inputPlaceholderSecond}
+							placeholder = "Produced"
 							/>
-			<button className={nameClasses.WatchForm.classNameButton}>Add</button>
+			<button className="add">Add</button>
 	</form>
 	)
 }

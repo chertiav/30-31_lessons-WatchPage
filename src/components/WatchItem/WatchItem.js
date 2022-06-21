@@ -1,7 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './WatchItem.css';
-import {contentStyles} from '../../model/constats';
-import { WatchContext } from '../../context';
+
+const contentStyles = {
+	color: 'white',
+};
 
 function toggleBackground(movie){
 	return {
@@ -12,8 +14,6 @@ function toggleBackground(movie){
 
 function WatchItem({movie, onDelete, onToogle}) {
 
-	const {nameClasses} = useContext(WatchContext);
-
 	function onMovieDelete (event) {
 		event.stopPropagation();
 		onDelete(movie.id)
@@ -21,16 +21,16 @@ function WatchItem({movie, onDelete, onToogle}) {
 
 	return (
 		<div
-			className={nameClasses.WatchItem.classNameContainer}
+			className="watch-item"
 			style={toggleBackground(movie)}
 			onClick={() => onToogle(movie.id)}
 			>
 			<div
-				className={nameClasses.WatchItem.classNameContent}>
+				className= "content">
 				{movie.title} produced by {movie.director}
 			</div>
 			<span
-				className={nameClasses.WatchItem.classNameButton}
+				className="delete-btn"
 				onClick={onMovieDelete}
 				>
 				X

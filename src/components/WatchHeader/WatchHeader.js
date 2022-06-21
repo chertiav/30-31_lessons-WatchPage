@@ -2,20 +2,22 @@ import React, { useContext } from 'react';
 import { WatchContext } from '../../context';
 import './WatchHeader.css';
 
+
 function WathHeader() {
 
-	const {nameClasses, logoPath, applicationTitle} = useContext(WatchContext);
+	const {applicationTitle, logoPath} = useContext(WatchContext);
+
 
 	return (
-		<div className={nameClasses.WatchHeader.classNameContainer}>
+		<div className="watch-header-container">
 			<span
-				className={nameClasses.WatchHeader.classNameTitle}
+				className="watch-header-title"
 			>
 				{applicationTitle}
 			</span>
-			<div className={nameClasses.WatchHeader.classNameContainerImg}>
+			<div className="wathc-header-img-container">
 				<img
-					className={nameClasses.WatchHeader.classNameImg}
+					className="wathc-header-img"
 					src={logoPath}
 					alt='LOGO'>
 				</img>
